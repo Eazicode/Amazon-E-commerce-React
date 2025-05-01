@@ -12,7 +12,7 @@ const Product = ({ products }) => {
             <p className='text-[16px] h-[65px]'>{product.name}</p>
             
             <div className='flex'>
-              <img className='w-25' src={`../images/ratings/rating-${product.rating.stars * 10}.png`}/>
+              <img className='w-30' src={`../images/ratings/rating-${product.rating.stars * 10}.png`}/>
               <span className='pl-2'>{product.rating.count}</span>
             </div>
 
