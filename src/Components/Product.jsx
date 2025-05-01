@@ -18,6 +18,8 @@ const Product = ({ products }) => {
 
             <p className='font-bold pt-4'>{`$${(product.priceCents / 100).toFixed(2)}`}</p>
 
+            {/* <p>{added}</p> */}
+
             <div className='flex justify-center px-3'>
               <button className='mt-10 bg-[#ffd814] w-full py-2 rounded-[20px] cursor-pointer'>Add to Cart</button>
             </div>
