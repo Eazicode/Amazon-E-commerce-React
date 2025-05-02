@@ -7,6 +7,11 @@ import { useState } from "react"
 function App() {
 
   const [filterproduct, setFilterProduct] = useState('');
+  const [updatecart, setUpdateCart] = useState(0);
+
+  const updateCartQuantity = () => {
+    setUpdateCart((u) => u + 1)
+  }
 
   const searchProducts = (e) => {
     setFilterProduct(e.target.value.toLowerCase())
@@ -18,9 +23,15 @@ function App() {
 
   return (
     <div>
-      <NavBar searchProducts={searchProducts}/>
+      <NavBar 
+        searchProducts={searchProducts}
+        updatecart = {updatecart}
+      />
       
-      <ProductsContainer products={filterProducts} />
+      <ProductsContainer 
+        products={filterProducts}
+        updateCartQuantity = {updateCartQuantity}
+      />
     </div>
     
   )
