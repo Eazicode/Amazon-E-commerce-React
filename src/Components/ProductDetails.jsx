@@ -1,7 +1,6 @@
 import SelectQuantity from './SelectQuantity';
 import { useState } from 'react';
 
-
 const ProductDetails = ({product, updateCartQuantity}) => {
 
   const [added, setAdded] = useState('');
@@ -24,7 +23,7 @@ const ProductDetails = ({product, updateCartQuantity}) => {
   return ( 
     <>
       <div className='p-[25px] pt-[40px] border border-gray-200' key={product.id}>
-        <img className='w-60 mx-auto mb-3' src={product.image} alt="" />
+        <img className='w-60 mx-auto mb-3' src={product.image} alt=""/>
         <p className='text-[16px] h-[50px]'>{product.name}</p>
         
         <div className='flex'>

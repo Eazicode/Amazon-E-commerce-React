@@ -3,7 +3,6 @@ import ProductsContainer from "./Components/ProductsContainer"
 import { products } from '../products'
 import { useState } from "react"
 
-
 function App() {
 
   const [filterproduct, setFilterProduct] = useState('');
@@ -38,3 +37,9 @@ function App() {
 }
 
 export default App
+
+
+
+
+
+
