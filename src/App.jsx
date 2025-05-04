@@ -22,15 +22,17 @@ function App() {
 
   return (
     <div>
-      <NavBar 
-        searchProducts={searchProducts}
-        updatecart = {updatecart}
-      />
-      
+
+        <NavBar
+          updatecart={updatecart}
+          searchProducts={searchProducts}
+        />
+
       <ProductsContainer 
         products={filterProducts}
         updateCartQuantity = {updateCartQuantity}
       />
+
     </div>
     
   )
