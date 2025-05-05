@@ -1,13 +1,15 @@
 import { IoSearchSharp } from "react-icons/io5";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 const NavBar = ({searchProducts, updatecart}) => {
   
   return ( 
     <>
       <div className="bg-[#131921] py-[2px] xl:px-8 flex items-center justify-around">
-        <img className="w-12 md:w-22 xl:w-26 cursor-pointer"  src="../images/icons/amazon-logo-white.png" alt="" />
-
+        <Link to="/">
+          <img className="w-12 md:w-22 xl:w-26 cursor-pointer"  src="../images/icons/amazon-logo-white.png" alt="" />
+        </Link>
         <div className="flex justify-center ">
           <input className="bg-white w-40 sm:w-80 md:w-100 lg:w-150 xl:w-200 h-10 outline-none ps-5 rounded-tl-sm rounded-bl-sm border-none"type="text"placeholder="Search"
             onChange={searchProducts}
@@ -19,11 +21,11 @@ const NavBar = ({searchProducts, updatecart}) => {
 
 
         <div className="flex">
-          <p className='text-white text-center mb-0'>{updatecart}</p>
-          <button className="cursor-pointer"><img className="w-6 lg:w-8" src="../images/icons/cart-icon.png" /></button>
+          <Link to="/CartPage">
+            <p className='text-white text-center mb-0'>{updatecart}</p>
+            <button className="cursor-pointer"><img className="w-6 lg:w-8" src="../images/icons/cart-icon.png" /></button>
+          </Link>
         </div>
-     
-    
         
         <div className="block sm:hidden bg-white p-2">
           <GiHamburgerMenu />

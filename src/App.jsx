@@ -1,7 +1,8 @@
-import NavBar  from "./Components/NavBar"
-import ProductsContainer from "./Components/ProductsContainer"
+import CartPage from "./Components/CartPage"
 import { products } from '../products'
 import { useState } from "react"
+import Home from "./Components/Home"
+import {Routes, Route} from 'react-router-dom'
 
 function App() {
 
@@ -23,25 +24,25 @@ function App() {
   return (
     <div>
 
-        <NavBar
-          updatecart={updatecart}
-          searchProducts={searchProducts}
+      <Routes>
+
+        <Route 
+          path="/" 
+          element={<Home 
+            updatecart={updatecart}
+            updateCartQuantity={updateCartQuantity}
+            searchProducts={searchProducts}
+            products={filterProducts}
+          />} 
         />
 
-      <ProductsContainer 
-        products={filterProducts}
-        updateCartQuantity = {updateCartQuantity}
-      />
+        <Route path="/CartPage" element={<CartPage />} />
 
+      </Routes>  
+   
     </div>
     
   )
 }
 
 export default App
-
-
-
-
-
-
