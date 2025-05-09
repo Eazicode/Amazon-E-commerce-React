@@ -7,7 +7,7 @@ const Home = ({updatecart, searchProducts, products, updateCartQuantity }) => {
     <>
       <NavBar 
         updatecart={updatecart}
-        searchProducts={ searchProducts}
+        searchProducts={searchProducts}
       />
             
       <ProductsContainer 

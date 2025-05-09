@@ -3,10 +3,11 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
 
 const NavBar = ({searchProducts, updatecart}) => {
+
   
   return ( 
     <>
-      <div className="bg-[#131921] py-[2px] xl:px-8 flex items-center justify-around">
+      <nav className="bg-[#131921] py-[2px] xl:px-8 flex items-center justify-around">
         <Link to="/">
           <img className="w-12 md:w-22 xl:w-26 cursor-pointer"  src="../images/icons/amazon-logo-white.png" alt="" />
         </Link>
@@ -20,17 +21,18 @@ const NavBar = ({searchProducts, updatecart}) => {
         <p className="hidden sm:block text-white text-sm lg:text-md font-medium p-3 border border-transparent hover:border-white cursor-pointer">Returns <br /> & Orders</p>
 
 
-        <div className="flex">
+        <div className="hidden sm:block px-3 border border-transparent hover:border-white">
           <Link to="/CartPage">
             <p className='text-white text-center mb-0'>{updatecart}</p>
             <button className="cursor-pointer"><img className="w-6 lg:w-8" src="../images/icons/cart-icon.png" /></button>
           </Link>
         </div>
-        
-        <div className="block sm:hidden bg-white p-2">
-          <GiHamburgerMenu />
+
+        <div className="block sm:hidden bg-white p-2" >
+          <GiHamburgerMenu/>
         </div>
-      </div>
+        
+      </nav>
     </> 
   );
 }

@@ -4,6 +4,7 @@ import { useState } from "react"
 import Home from "./Components/Home"
 import {Routes, Route} from 'react-router-dom'
 
+
 function App() {
 
   const [filterproduct, setFilterProduct] = useState('');
@@ -21,6 +22,8 @@ function App() {
     return product.name.toLowerCase().includes(filterproduct)
   })
 
+  
+
   return (
     <div>
 
@@ -36,10 +39,12 @@ function App() {
           />} 
         />
 
-        <Route path="/CartPage" element={<CartPage />} />
+        <Route path="/CartPage" element={<CartPage 
+          updatecart={updatecart}
+          />} 
+        />
 
       </Routes>  
-   
     </div>
     
   )

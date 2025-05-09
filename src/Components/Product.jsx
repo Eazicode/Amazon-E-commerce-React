@@ -10,7 +10,7 @@ const Product = ({ products, updateCartQuantity}) => {
           <ProductDetails
             key={product.id}  
             product={product}
-            updateCartQuantity = {updateCartQuantity}
+            updateCartQuantity ={updateCartQuantity}
           />
         )
         })

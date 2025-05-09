@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 const ProductDetails = ({product, updateCartQuantity}) => {
 
-  const [added, setAdded] = useState('');
+  const [added, setAdded] = useState('')
 
   const addToCart = () => {
     setAdded( 
@@ -18,6 +18,8 @@ const ProductDetails = ({product, updateCartQuantity}) => {
     }, 3000)
 
     updateCartQuantity()
+    console.log(product)
+    
   }
 
   return ( 
